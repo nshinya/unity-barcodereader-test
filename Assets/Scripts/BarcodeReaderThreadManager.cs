@@ -57,6 +57,12 @@ public class BarcodeReaderThreadManager : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        // Exit the app when the 'back' button is pressed.
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
         if (webcamTexture == null || !webcamTexture.isPlaying)
         {
             return;
